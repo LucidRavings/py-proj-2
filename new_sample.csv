@@ -1,0 +1,4 @@
+size,name,price,flavor,frosting,sprinkles,filling
+mini,Berry Blast,3.95,mixed berry,purple,"['blue', 'red']",
+regular,Chocolate Crisis,5.97,chocolate,chocolate,"['chocolate', 'white chocolate']",chocolate
+large,Poppyseed Punisher,9.95,vanilla,white,,
