@@ -95,6 +95,13 @@ def write_new_csv(file, cupcakes):
 # write_new_csv("new_sample.csv", cupcake_seed)
 # read_csv("new_sample.csv")
 
+def find_cupcake(file, name):
+    for cupcake in get_cupcakes(file):
+        if cupcake["name"] == name:
+            return cupcake
+    return None
+
+
 def add_cupcake(file, cupcake):
     with open(file,"a",newline="\n") as csvfile:
         fieldnames = ["size","name","price","flavor","frosting","sprinkles","filling"]
@@ -113,6 +120,10 @@ def get_cupcakes(file):
         reader = csv.DictReader(csvfile)
         reader = list(reader)
         return reader
+    
+    
+
+
 
 # cupcake1 = Cupcake("Chocolate Chip", 1.99, "vanilla", "chocolate", "chocolate chips", "regular")
 # print(cupcake1)
