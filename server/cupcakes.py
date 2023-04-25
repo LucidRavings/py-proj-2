@@ -92,8 +92,8 @@ def write_new_csv(file, cupcakes):
             else:
                 writer.writerow({"size": cupcake.size,"name": cupcake.name,"price": cupcake.price,"flavor":cupcake.flavor,"frosting":cupcake.frosting})
 
-write_new_csv("new_sample.csv", cupcake_seed)
-read_csv("new_sample.csv")
+# write_new_csv("new_sample.csv", cupcake_seed)
+# read_csv("new_sample.csv")
 
 def add_cupcake(file, cupcake):
     with open(file,"a",newline="\n") as csvfile:
@@ -107,6 +107,12 @@ def add_cupcake(file, cupcake):
         else:
             writer.writerow({"size": cupcake.size,"name": cupcake.name,"price": cupcake.price,"flavor":cupcake.flavor,"frosting":cupcake.frosting})
 
+
+def get_cupcakes(file):
+    with open(file) as csvfile:
+        reader = csv.DictReader(csvfile)
+        reader = list(reader)
+        return reader
 
 # cupcake1 = Cupcake("Chocolate Chip", 1.99, "vanilla", "chocolate", "chocolate chips", "regular")
 # print(cupcake1)
